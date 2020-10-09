@@ -13,7 +13,7 @@
 # Project Name, which is also the ouput binary file name
 set(PROJECT_NAME "NasNas_Game_Template")
 # Assets directory path, will be copied in bin when cmake is called
-set(ASSETS_DIR_NAME "assets")
+set(ASSETS_DIR_NAME "")
 
 # Select the modules you want to build
 # The following variables can be set to FALSE to exclude the associated module
