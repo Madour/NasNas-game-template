@@ -9,8 +9,11 @@ This repository is a template you can use to setup a project that uses [NasNas](
 
 Follow these 3 steps :
 
-1. Clone this repository  : `git clone --recurse https://github.com/Madour/NasNas-game-template` 
-
+1. Clone this repository and update NasNas :
+```bash
+git clone --recurse https://github.com/Madour/NasNas-game-template
+git submodule update --remote
+```
 2. Open `CMakeLists.txt` file and set your custom configurations in the "User Configuration" section.
 
 3. Now, you are ready to build :
