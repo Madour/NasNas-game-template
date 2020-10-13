@@ -5,6 +5,6 @@
 class Game : public ns::App {
 public:
     Game();
-    void onEvent(const sf::Event& event);
-    void update();
+    void onEvent(const sf::Event& event) override;
+    void update() override;
 };

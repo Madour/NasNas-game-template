@@ -53,7 +53,7 @@ file(GLOB_RECURSE Game_Src src/*.cpp src/*.hpp)
 file(GLOB_RECURSE Game_Inc include/*.hpp)
 # copy assets directory near binary output
 if (ASSETS_DIR_NAME)
-	file(COPY ${ASSETS_DIR_NAME} DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+    file(COPY ${ASSETS_DIR_NAME} DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 endif()
 ###############################################################################
 
@@ -67,6 +67,6 @@ add_executable(${PROJECT_NAME}
     ${Game_Src} ${Game_Inc}
     main.cpp
 )
-target_include_directories(${PROJECT_NAME} PRIVATE src include NasNas NasNas/include)
+target_include_directories(${PROJECT_NAME} PRIVATE src include NasNas/include)
 target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-audio)
 ###############################################################################
