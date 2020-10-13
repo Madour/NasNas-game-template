@@ -4,8 +4,8 @@
 # solution for a NasNas game. 
 
 # Note: Everytime you add a new file to the project or 
-# 		update an asset, be sure to rerun `cmake ..`
-#		to update the cache.
+#       update an asset, be sure to rerun `cmake ..`
+#       to update the cache.
 
 
 
@@ -33,9 +33,9 @@ project(${PROJECT_NAME})
 
 ###### Find SFML library ######################################################
 if (WIN32)
-    set(SFML_ROOT C:/SFML)			# specify here the install location of SFML
-    set(SFML_STATIC_LIBRARIES TRUE)	# set to false if you want to use DLLs
-    find_package(SFML COMPONENTS graphics audio PATHS ${SFML_ROOT}/lib/cmake/ )
+    set(SFML_DIR C:/SFML)               # specify here the install location of SFML
+    set(SFML_STATIC_LIBRARIES TRUE)     # set to false if you want to use DLLs
+    find_package(SFML COMPONENTS graphics audio PATHS ${SFML_DIR}/lib/cmake/ )
 else()
     find_package(SFML COMPONENTS graphics audio )
 endif()
@@ -60,8 +60,8 @@ endif()
 
 ###### Create the executabe target and link it ################################
 add_executable(${PROJECT_NAME}
-	# framework source files here
-    NasNas/NasNas.h ${NasNas_Src} ${NasNas_Inc}
+    # framework source files here
+    NasNas/include/NasNas.h ${NasNas_Src} ${NasNas_Inc}
 
     # user source files here
     ${Game_Src} ${Game_Inc}
