@@ -12,6 +12,7 @@ Follow these 3 steps :
 1. Clone this repository and update NasNas :
 ```bash
 git clone --recurse https://github.com/Madour/NasNas-game-template
+cd NasNas-game-template
 git submodule update --remote
 ```
 2. Open `CMakeLists.txt` file and set your custom configurations in the "User Configuration" section.
