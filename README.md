@@ -11,8 +11,8 @@ Follow these 3 steps :
 
 1. Clone this repository and update NasNas :
 ```bash
-git clone --recurse https://github.com/Madour/NasNas-game-template
-cd NasNas-game-template
+git clone --recurse https://github.com/Madour/NasNas-game-template MyNewGame
+cd MyNewGame
 git submodule update --remote
 ```
 2. Open `CMakeLists.txt` file and set your custom configurations in the "User Configuration" section.
@@ -24,6 +24,9 @@ mkdir build && cd build
 cmake ..
 cmake --build . -j4
 ```
+
+(You can refer to the **[Build](https://github.com/Madour/NasNas#build)** section for the list of possible cmake options you can use)
+
 
 If everything went fine, go ahead and run the binary file in `build/bin`. You'll see a black window with "Hello World !" displayed.
 
