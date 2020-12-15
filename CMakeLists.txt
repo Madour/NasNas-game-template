@@ -10,7 +10,7 @@
 
 
 ###### User Configuration #####################################################
-# Project Name, which is also the ouput binary file name
+# Project Name, which is also the output binary file name
 set(PROJECT_NAME "NasNas_Game_Template")
 # Assets directory path, will be copied in bin when cmake is called
 set(ASSETS_DIR_NAME "")
@@ -45,10 +45,10 @@ add_executable(${PROJECT_NAME}
     main.cpp
 )
 target_include_directories(${PROJECT_NAME} PRIVATE src include NasNas/include)
-target_link_libraries(${PROJECT_NAME} NasNas sfml-graphics sfml-audio)
+target_link_libraries(${PROJECT_NAME} NasNas)
 ###############################################################################
 
-###### Adding the compile definitions needed by the headers ###################
+###### Add compile definitions needed by the headers ###################
 if(NASNAS_BUILD_RESLIB)
     target_compile_definitions(${PROJECT_NAME} PRIVATE -DNS_RESLIB)
 endif()
