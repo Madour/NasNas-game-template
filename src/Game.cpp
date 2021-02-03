@@ -2,7 +2,7 @@
 
 Game::Game() :ns::App("NasNas Game Template", 720, 480) {
 	ns::Config::debug = true;
-	addDebugText<std::string>([](){return "World !";}, "Hello", {0, 0});
+	addDebugText("Hello World !", {20, 10});
 }
 
 void Game::onEvent(const sf::Event& event) {
