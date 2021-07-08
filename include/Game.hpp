@@ -1,6 +1,6 @@
 #pragma once
 
-#include <NasNas.h>
+#include <NasNas/Core.hpp>
 
 class Game : public ns::App {
 public:

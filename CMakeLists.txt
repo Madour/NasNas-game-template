@@ -1,7 +1,7 @@
 # Modar Nasser - 9/10/2020
 
 # This CMakeLists.txt will automatically generate build
-# solution for a NasNas game. 
+# solution for a game using NasNas framework.
 
 
 ###### User Configuration #####################################################
@@ -12,9 +12,6 @@ set(PROJECT_NAME "NasNas_Game_Template")
 
 cmake_minimum_required(VERSION 3.10)
 project(${PROJECT_NAME})
-
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR})
 
 
 ###### Load NasNas  ###########################################################
@@ -31,7 +28,7 @@ file(GLOB_RECURSE Game_Inc include/*.hpp)
 ###### Create the executabe target and link it ################################
 add_executable(${PROJECT_NAME} ${Game_Src} ${Game_Inc})
 target_include_directories(${PROJECT_NAME} PRIVATE src include NasNas/include)
-target_link_libraries(${PROJECT_NAME} NasNas)
+target_link_libraries(${PROJECT_NAME} NasNas::All)
 
 set_target_properties(
         ${PROJECT_NAME}
