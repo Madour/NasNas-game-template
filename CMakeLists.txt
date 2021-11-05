@@ -25,7 +25,7 @@ file(GLOB_RECURSE Game_Inc include/*.hpp)
 ###############################################################################
 
 
-###### Create the executabe target and link it ################################
+###### Create the executable target and link it ################################
 add_executable(${PROJECT_NAME} ${Game_Src} ${Game_Inc})
 target_include_directories(${PROJECT_NAME} PRIVATE src include NasNas/include)
 target_link_libraries(${PROJECT_NAME} NasNas::All)

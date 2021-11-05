@@ -1,1 +1,7 @@
 build
+build-*
+cmake-build-*
+
+*.exe
+*.pdb
+*.ilk

@@ -1,6 +1,6 @@
 #include "Game.hpp"
 
-Game::Game() : ns::App("NasNas Game Template", 720, 480) {
+Game::Game() : ns::App("NasNas Game Template", {720, 480}) {
     // Create or initialize your drawables and game objects here
 
     // Create your scenes and cameras here
@@ -8,7 +8,7 @@ Game::Game() : ns::App("NasNas Game Template", 720, 480) {
     // Add your game objects to your scenes here
 
     // Add your debug texts here
-    ns::Config::debug = true;
+    ns::Settings::debug_mode = true;
     addDebugText("Hello World !", {20, 10});
 }
 
