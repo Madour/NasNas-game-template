@@ -20,21 +20,17 @@ git submodule update --remote
 3. Now, you are ready to build :
 
 ```bash
-mkdir build && cd build
-cmake ..
-cmake --build . -j4
+cmake -Bbuild .
+cmake --build build -j4
 ```
 
-(You can refer to the **[Build](https://github.com/Madour/NasNas#build)** section for the list of possible cmake options you can use)
-
-
-If everything went fine, go ahead and run the binary file in `build/bin`. You'll see a black window with "Hello World !" displayed.
+If everything went fine, go ahead and run the binary file at the root of the folder. You'll see a black window with "Hello World !" displayed.
 
 Now you are ready to use NasNas to create awesome games :tada:!
 
 # 
 
-A complete **[tutorial](https://github.com/Madour/NasNas/wiki)** is available to get you started ! 
+A **[tutorial](https://github.com/Madour/NasNas/wiki)** is available to get you started ! 
 
 #
 
