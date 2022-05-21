@@ -15,7 +15,23 @@ project(${PROJECT_NAME})
 
 
 ###### Load NasNas  ###########################################################
+# Comment if you want to use an existing SFML installation
+set(NASNAS_BUILD_SFML TRUE CACHE BOOL "Download and build SFML as a subproject" FORCE)
+
+# Uncomment if you want to use the static libraries of an exising SFML installation
+# set(SFML_STATIC_LIBRARIES TRUE)
+
 add_subdirectory(NasNas)
+
+if(MSVC AND NASNAS_BUILD_SFML)
+    add_compile_options(
+            $<$<CONFIG:>:/MT>
+            $<$<CONFIG:Debug>:/MTd>
+            $<$<CONFIG:Release>:/MT>
+            $<$<CONFIG:MinSizeRel>:/MT>
+            $<$<CONFIG:RelWithDebInfo>:/MT>
+    )
+endif()
 ###############################################################################
 
 
@@ -27,7 +43,7 @@ file(GLOB_RECURSE Game_Inc include/*.hpp)
 
 ###### Create the executable target and link it ################################
 add_executable(${PROJECT_NAME} ${Game_Src} ${Game_Inc})
-target_include_directories(${PROJECT_NAME} PRIVATE src include NasNas/include)
+target_include_directories(${PROJECT_NAME} PRIVATE src include)
 target_link_libraries(${PROJECT_NAME} NasNas::All)
 
 set_target_properties(
