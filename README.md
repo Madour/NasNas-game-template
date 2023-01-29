@@ -4,8 +4,9 @@ This repository is a template you can use to setup a project that uses [NasNas](
 
 *Requirements :*
 
-- SFML2.5 installed.
 - CMake >=3.10 installed (check with `cmake --version`).
+- A compiler (MSVC, gcc or clang)
+- Optional: SFML2.5 installed
 
 Follow these 3 steps :
 
