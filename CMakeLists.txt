@@ -1,7 +1,7 @@
 # Modar Nasser - 9/10/2020
 
-# This CMakeLists.txt will automatically generate build
-# solution for a game using NasNas framework.
+# This CMakeLists.txt will automatically generate a
+# build solution for a game using NasNas framework.
 
 
 ###### User Configuration #####################################################
@@ -18,20 +18,7 @@ project(${PROJECT_NAME})
 # Comment if you want to use an existing SFML installation
 set(NASNAS_BUILD_SFML TRUE CACHE BOOL "Download and build SFML as a subproject" FORCE)
 
-# Uncomment if you want to use the static libraries of an exising SFML installation
-# set(SFML_STATIC_LIBRARIES TRUE)
-
 add_subdirectory(NasNas)
-
-if(MSVC AND NASNAS_BUILD_SFML)
-    add_compile_options(
-            $<$<CONFIG:>:/MT>
-            $<$<CONFIG:Debug>:/MTd>
-            $<$<CONFIG:Release>:/MT>
-            $<$<CONFIG:MinSizeRel>:/MT>
-            $<$<CONFIG:RelWithDebInfo>:/MT>
-    )
-endif()
 ###############################################################################
 
 
@@ -41,7 +28,7 @@ file(GLOB_RECURSE Game_Inc include/*.hpp)
 ###############################################################################
 
 
-###### Create the executable target and link it ################################
+###### Create the executable target and link it ###############################
 add_executable(${PROJECT_NAME} ${Game_Src} ${Game_Inc})
 target_include_directories(${PROJECT_NAME} PRIVATE src include)
 target_link_libraries(${PROJECT_NAME} NasNas::All)
